@@ -1,0 +1,28 @@
+{% extends "mkp/layout.html" %}
+{% load static %}
+
+{% block body %}
+<section class="sec">
+    <h1 id="welcome" name="main" style="color: green;">Welcome To Mergekp</h1>
+    <a href="{% static 'mkp/images/icons/mkplogo.jpeg' %}"><image src="{% static 'mkp/images/icons/mkplogo.jpeg' %}" class="logo"></image></a>
+    <br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label name="Enter your RegNo:" class="lebel1">Registration Number:</label><br><br>
+
+        <input type="text" placeholder="Reg Number" autocomplete="off" autofocus autocapitalize="text" class="detail" id="detail" name="regno">
+
+        <br><br>
+        <label name="Enter your RegNo:" class="lebel2">Email Address:</label><br><br>
+
+        <input type="email" placeholder="email" autocomplete="off" autofocus class="detail" name="email"><br><br><br>
+
+        <input type="submit" value="Comfirm" class="comfirm">
+   </form>
+   
+   <p><a href="#">I'am a lecturer</a></p>
+</section>
+<!--<script src="/static/js/main.js"></script>-->
+
+{% endblock %}
+
